@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello NotesController!{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+    <table border="1">
+     <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Note 1</th>
+            <th>Note 2</th>
+            <th>Note 3</th>
+        </tr>
+     </thead>
+     <tbody>
+        {% for nom, notes in notes %}
+        <tr>
+            <td>{{nom}}</td>
+            {% for note in notes %}
+            <td>{{note}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+     </tbody>
+     </table>
+    </div>
+{% endblock %}
